@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            
+        </style>
+
+        <link rel="script" href="script.js">
+
+  
+
+    </head>
+    
+        <body>
+        
+            <button id="myBtn">Free Bananas</button>
+            <p id="demo"></p>
+        </body>
+        
+        <script>
+            var x = document.getElementById("myBtn");
+    
+            var a = 0/0
+    
+            x.addEventListener("click", mySecondFunction);
+    
+            function mySecondFunction() {
+            document.getElementById("demo").innerHTML += "ba" + a + "a<br>";
+                
+                //dit is hetzelfde als: 
+                //document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>";
+                // += is de shorthand voor wat hier staat
+
+                }
+        </script>
+    </html>
