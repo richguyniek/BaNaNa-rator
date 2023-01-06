@@ -21,21 +21,53 @@
         
             <button id="myBtn">Free Bananas</button>
             <p id="demo"></p>
+
         </body>
         
         <script>
             var x = document.getElementById("myBtn");
     
             var a = 0/0
-    
+        //    x.addEventListener("click", myFunction)
             x.addEventListener("click", mySecondFunction);
     
+            //function.myFunction(){
+                //let letters = document.querySelector('#myBtn').innerHTML.split('');
+                //let quote = document.querySelector('#demo').innerHTML.split('');
+                //const colToHex = (c) => {
+    
+                //let color = (c < 75) ? c + 75 : c
+                //let hex = color.toString(16);
+               // return hex.length == 1 ? "0" + hex : hex;
+              //      }
+
+                 //   const rgbToHex = (r,g,b) => {
+           //         return "#" + colToHex(r) + colToHex(g) + colToHex(b);
+                //        }
+
+              //          const getRandomColor = () => {
+               //         return rgbToHex(
+                //        Math.floor(Math.random() * 255),
+                //        Math.floor(Math.random() * 255),
+                //        Math.floor(Math.random() * 255));
+
+        //    }
+
             function mySecondFunction() {
-            document.getElementById("demo").innerHTML += "ba" + a + "a<br>";
+            document.getElementById("demo").innerHTML+= "ba" + a + "a<br>";             //dit is hetzelfde als: document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>"; // += is de shorthand voor wat hier staat 
+            
+            
+            
+            //function randomColor() {
+    //return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+//};
+           
+            //onclick= "#" + Math.floor(Math.random()*16777215);
                 
-                //dit is hetzelfde als: 
-                //document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>";
-                // += is de shorthand voor wat hier staat
+            
+            //dit is hetzelfde als:   
+            //document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>";  
+            // += is de shorthand voor wat hier staat
 
                 }
         </script>
