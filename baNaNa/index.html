@@ -19,56 +19,65 @@
     
         <body>
         
-            <button id="myBtn">Free Bananas</button>
-            <p id="demo"></p>
+            <button id="generator">Free Bananas</button>
+            <p id="output"></p>
 
         </body>
         
         <script>
-            var x = document.getElementById("myBtn");
+
+                //code wordt hierop gebaseerd:  random = "#" + Math.floor(Math.random()*16777215).toString(16) (staat geschreven in jquery);
+
+                // var x = document.getElementById("myBtn");
     
-            var a = 0/0
-        //    x.addEventListener("click", myFunction)
-            x.addEventListener("click", mySecondFunction);
+                // var a = 0/0
+                //    x.addEventListener("click", myFunction)
+                // x.addEventListener("click", mySecondFunction);
     
-            //function.myFunction(){
+
+
+                // function mySecondFunction() {
+                //  document.getElementById("demo").innerHTML+= "ba" + a + "a<br>";             //dit is hetzelfde als: document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>"; // += is de shorthand voor wat hier staat 
+            
+            
+            
+       
+                
+
+                //function randomColor() {
+                //return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+                //};
+           
+                //onclick= "#" + Math.floor(Math.random()*16777215);
+                
+            
+
+
+                //failed wooblystuff
+                //function.myFunction(){
                 //let letters = document.querySelector('#myBtn').innerHTML.split('');
                 //let quote = document.querySelector('#demo').innerHTML.split('');
                 //const colToHex = (c) => {
     
                 //let color = (c < 75) ? c + 75 : c
                 //let hex = color.toString(16);
-               // return hex.length == 1 ? "0" + hex : hex;
-              //      }
+                // return hex.length == 1 ? "0" + hex : hex;
+                //      }
 
-                 //   const rgbToHex = (r,g,b) => {
-           //         return "#" + colToHex(r) + colToHex(g) + colToHex(b);
+                //   const rgbToHex = (r,g,b) => {
+                //         return "#" + colToHex(r) + colToHex(g) + colToHex(b);
                 //        }
 
-              //          const getRandomColor = () => {
-               //         return rgbToHex(
+                //          const getRandomColor = () => {
+                //         return rgbToHex(
                 //        Math.floor(Math.random() * 255),
                 //        Math.floor(Math.random() * 255),
                 //        Math.floor(Math.random() * 255));
 
-        //    }
+                //    }
 
-            function mySecondFunction() {
-            document.getElementById("demo").innerHTML+= "ba" + a + "a<br>";             //dit is hetzelfde als: document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>"; // += is de shorthand voor wat hier staat 
-            
-            
-            
-            //function randomColor() {
-    //return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
-//};
-           
-            //onclick= "#" + Math.floor(Math.random()*16777215);
-                
-            
-            //dit is hetzelfde als:   
-            //document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>";  
-            // += is de shorthand voor wat hier staat
+        
 
-                }
+
         </script>
     </html>
