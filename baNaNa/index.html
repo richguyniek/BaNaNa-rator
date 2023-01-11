@@ -28,25 +28,54 @@
 
                 //code wordt hierop gebaseerd:  random = "#" + Math.floor(Math.random()*16777215).toString(16) (staat geschreven in jquery);
 
-                // var x = document.getElementById("myBtn");
+                 var x = document.getElementById("generator");
     
-                // var a = 0/0
+                 var a = 0/0
                 //    x.addEventListener("click", myFunction)
-                // x.addEventListener("click", mySecondFunction);
+                 x.addEventListener("click", randomizeColorFunction);
+                 x.addEventListener("click", randomizePlaceFunction);
     
 
 
-                // function mySecondFunction() {
-                //  document.getElementById("demo").innerHTML+= "ba" + a + "a<br>";             //dit is hetzelfde als: document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>"; // += is de shorthand voor wat hier staat 
-            
-            
-            
-       
-                
+                 function randomizeColorFunction() {
+                  var baNaNa =
+                    document.getElementById("output").innerHTML+= `<font color=${randomColor()}>ba${a}a</font><br>`;// "<font color='"+ randomColor() +"'>ba" + a + "a</font><br>";             //dit is hetzelfde als: document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "ba" + a + "a<br>"; // += is de shorthand voor wat hier staat 
+    
+                 }
 
-                //function randomColor() {
-                //return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
-                //};
+                 function randomizePlaceFunction(){
+                    document.querySelector("p")
+                    var fullWidth = window.innerWidth;
+                    var fullHeight = window.innerHeight;
+                    var elem = document.createElement("div");
+                   
+                    elem.textContent = BaNaNa[visible];
+                    elem.style.position = "absolute";
+                    elem.style.left = Math.round(Math.random() * fullWidth) + "px";
+                     elem.style.top = Math.round(Math.random() * fullHeight) + "px";
+                     document.body.appendChild(elem);
+
+                     visible++;
+                 }
+       
+                 
+
+                function randomColor() {
+                return "#" + Math.floor(Math.random()*16777215).toString(16);
+                };
+
+
+               /* function randomPlace(){
+                document.querySelector("p")
+                    textContent = ("output")
+                    style.position = "absolute";
+                    style.left = Math.round(Math.random() * fullWidth) + "px";
+                    style.top = Math.round(Math.random() * fullHeight) + "px";
+
+
+                    
+                }
+                */
            
                 //onclick= "#" + Math.floor(Math.random()*16777215);
                 
@@ -76,8 +105,22 @@
 
                 //    }
 
-        
 
+                /* var a = "PIEMOL";
+                switch(a) {
+                    case "GET":
+                        console.log("Dit is een GET request.");
+                        break;
+                    case "POST":
+                        console.log("Dit is een POST request");
+                        break;
+                    default:
+                        console.log("Ik heb echt geen flauw fucking benul.");
+                        break;
+                } */
+
+                /* var a = 1 + 1;
+                console.log(`${a == 2 ? true : false}`); */
 
         </script>
     </html>
