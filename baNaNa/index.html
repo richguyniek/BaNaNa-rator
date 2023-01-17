@@ -21,7 +21,7 @@
         
             <form >
 
-                <input type="submit" value="Free Bananas">
+                <input id="button" type="submit" value="Free Bananas">
 
             </form>
             
@@ -30,106 +30,48 @@
         
         <script>
 
-                //code wordt hierop gebaseerd:  random = "#" + Math.floor(Math.random()*16777215).toString(16) (staat geschreven in jquery);
-
-            var x = document.getElementById("generator");
+            // 0/0 geeft NaN
     
             var a = 0/0
 
+
+            //maakt een event listener met een queryselector voor de form. !!als je dit verplaatst naar een lagere plek in de code werkt de button niet meer!!
             document.querySelector("form").addEventListener("submit", function(e) {
                 e.preventDefault();
                 
-                randomPlace();
+                randomizers();
             })
+
+            //plaats for loop hierzo
              
-            //!!belangrijk!!
-            function randomColor() {
-            return "#" + Math.floor(Math.random()*16777215).toString(16);
-            };
 
             function word() {
-                return `<font color=${randomColor()}>ba${a}a</font><br>`;
+            return `ba${a}i</font><br>`;
             }
-            function randomPlace(){
-            var visible = 0;
 
-            console.log();
+            function randomizers(){
+            
+
+            //definieert hoogte en breedte voor position randomizer
+
             var fullWidth = window.innerWidth;
             var fullHeight = window.innerHeight;
 
+            //maakt divs aan met function word (zie 'function word' boven 'function randomizers')
             var elem = document.createElement("div");
-            elem.innerHTML = word(visible);
+            elem.innerHTML = word();
             elem.style.position = "absolute";
+            //position randomizer
             elem.style.left = Math.round(Math.random() * fullWidth) + "px";
             elem.style.top = Math.round(Math.random() * fullHeight) + "px";
+            //fontsize randomizer
+            elem.style.fontSize = Math.round((Math.random() * 93)+8) + "px";
+            //color randomizer
+            elem.style.color =  "#" + Math.floor(Math.random()*16777215/*=aantal mogelijke kleur codes*/).toString(16);
             document.body.appendChild(elem);
-            console.log;
-            visible++;
-            console.log();
-        }
-            
-            ;
-
-                 /*function randomizePlaceFunction(){
-                    document.querySelector("p")
-                    var fullWidth = window.innerWidth;
-                    var fullHeight = window.innerHeight;
-                    var elem = document.createElement("div");
-                   
-                    elem.textContent = BaNaNa[visible];
-                    elem.style.position = "absolute";
-                    elem.style.left = Math.round(Math.random() * fullWidth) + "px";
-                     elem.style.top = Math.round(Math.random() * fullHeight) + "px";
-                     document.body.appendChild(elem);
-
-                     visible++;
-                 }*/
-       
-                 
-
-                
-
-
-               /* function randomPlace(){
-                document.querySelector("p")
-                    textContent = ("output")
-                    style.position = "absolute";
-                    style.left = Math.round(Math.random() * fullWidth) + "px";
-                    style.top = Math.round(Math.random() * fullHeight) + "px";
-
-
-                    
-                }
-                */
-           
-                //onclick= "#" + Math.floor(Math.random()*16777215);
-                
             
 
-
-                //failed wooblystuff
-                //function.myFunction(){
-                //let letters = document.querySelector('#myBtn').innerHTML.split('');
-                //let quote = document.querySelector('#demo').innerHTML.split('');
-                //const colToHex = (c) => {
-    
-                //let color = (c < 75) ? c + 75 : c
-                //let hex = color.toString(16);
-                // return hex.length == 1 ? "0" + hex : hex;
-                //      }
-
-                //   const rgbToHex = (r,g,b) => {
-                //         return "#" + colToHex(r) + colToHex(g) + colToHex(b);
-                //        }
-
-                //          const getRandomColor = () => {
-                //         return rgbToHex(
-                //        Math.floor(Math.random() * 255),
-                //        Math.floor(Math.random() * 255),
-                //        Math.floor(Math.random() * 255));
-
-                //    }
-
+            }
 
                 /* var a = "PIEMOL";
                 switch(a) {
