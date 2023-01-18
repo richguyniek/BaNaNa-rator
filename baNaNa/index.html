@@ -38,37 +38,36 @@
             //maakt een event listener met een queryselector voor de form. !!als je dit verplaatst naar een lagere plek in de code werkt de button niet meer!!
             document.querySelector("form").addEventListener("submit", function(e) {
                 e.preventDefault();
-                
+                var randomAmount = Math.floor((Math.random()*10)+1)
+                 
+                //voert''function word''' en de randomizer tussen 1 tot en met 10 keer uit
+                 for (let i= randomAmount; i<11;i++ )
                 randomizers();
             })
 
-            //plaats for loop hierzo
-             
-
             function word() {
-            return `ba${a}i</font><br>`;
+            return `ba${a}a</font><br>`;
             }
 
             function randomizers(){
-            
+        
+                //definieert hoogte en breedte voor position randomizer
 
-            //definieert hoogte en breedte voor position randomizer
+                var fullWidth = window.innerWidth;
+                var fullHeight = window.innerHeight;
 
-            var fullWidth = window.innerWidth;
-            var fullHeight = window.innerHeight;
-
-            //maakt divs aan met function word (zie 'function word' boven 'function randomizers')
-            var elem = document.createElement("div");
-            elem.innerHTML = word();
-            elem.style.position = "absolute";
-            //position randomizer
-            elem.style.left = Math.round(Math.random() * fullWidth) + "px";
-            elem.style.top = Math.round(Math.random() * fullHeight) + "px";
-            //fontsize randomizer
-            elem.style.fontSize = Math.round((Math.random() * 93)+8) + "px";
-            //color randomizer
-            elem.style.color =  "#" + Math.floor(Math.random()*16777215/*=aantal mogelijke kleur codes*/).toString(16);
-            document.body.appendChild(elem);
+                //maakt divs aan met function word (zie 'function word' boven 'function randomizers')
+                var elem = document.createElement("div");
+                elem.innerHTML = word();
+                elem.style.position = "absolute";
+                //position randomizer
+                elem.style.left = Math.round(Math.random() * fullWidth) + "px";
+                elem.style.top = Math.round(Math.random() * fullHeight) + "px";
+                //fontsize randomizer
+                elem.style.fontSize = Math.round((Math.random() * 93)+8) + "px";
+                //color randomizer
+                elem.style.color =  "#" + Math.floor(Math.random()*16777215/*=aantal mogelijke kleur codes*/).toString(16);
+                document.body.appendChild(elem);
             
 
             }
