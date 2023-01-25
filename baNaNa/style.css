@@ -12,6 +12,7 @@ Body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 div{
     z-index: -1;
